@@ -76,7 +76,7 @@ export default function Home() {
 		return () => clearInterval(id);
 	}, []);
 	return (
-		<main className="container">
+		<main className="container bg-slate-950">
 			<Navigation />
 			<div className="px-6 mt-[150px]">
 				<section className="flex flex-col mt-20">
