@@ -78,7 +78,7 @@ export default function Home() {
 	return (
 		<main className="container bg-slate-950 text-slate-200">
 			<Navigation />
-			<div className="px-6 pt-[150px]">
+			<div className="px-6 pt-[40px]">
 				<section className="flex flex-col mt-20">
 					<h1 className="font-black text-3xl relative">
 						Mi pravimo
