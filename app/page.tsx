@@ -76,9 +76,9 @@ export default function Home() {
 		return () => clearInterval(id);
 	}, []);
 	return (
-		<main className="container bg-slate-950">
+		<main className="container bg-slate-950 text-slate-200">
 			<Navigation />
-			<div className="px-6 mt-[150px]">
+			<div className="px-6 pt-[150px]">
 				<section className="flex flex-col mt-20">
 					<h1 className="font-black text-3xl relative">
 						Mi pravimo
