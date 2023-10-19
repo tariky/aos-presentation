@@ -235,10 +235,62 @@ export default function Home() {
 			<section className="flex flex-col px-6 py-10">
 				<span className="font-medium text-xl">Navigacija</span>
 				<div className="flex flex-col mt-8 gap-3">
-					<span className="font-regular text-lg">Početna</span>
-					<span className="font-regular text-lg">Rješenja</span>
-					<span className="font-regular text-lg">Reference</span>
-					<span className="font-regular text-lg">Kontaktiraj nas</span>
+					<span
+						className="font-regular text-lg hover:underline"
+						onClick={() => {
+							scroller.scrollTo("hero", {
+								duration: 1500,
+								delay: 300,
+								smooth: true,
+								offset: -50, // Scrolls to element + 50 pixels down the page
+								// ... other options
+							});
+						}}
+					>
+						Početna
+					</span>
+					<span
+						className="font-regular text-lg hover:underline"
+						onClick={() => {
+							scroller.scrollTo("solutions", {
+								duration: 1500,
+								delay: 300,
+								smooth: true,
+								offset: -50, // Scrolls to element + 50 pixels down the page
+								// ... other options
+							});
+						}}
+					>
+						Rješenja
+					</span>
+					<span
+						className="font-regular text-lg hover:underline"
+						onClick={() => {
+							scroller.scrollTo("reviews", {
+								duration: 1500,
+								delay: 300,
+								smooth: true,
+								offset: -50, // Scrolls to element + 50 pixels down the page
+								// ... other options
+							});
+						}}
+					>
+						Reference
+					</span>
+					<span
+						className="font-regular text-lg hover:underline"
+						onClick={() => {
+							scroller.scrollTo("contact", {
+								duration: 1500,
+								delay: 300,
+								smooth: true,
+								offset: -50, // Scrolls to element + 50 pixels down the page
+								// ... other options
+							});
+						}}
+					>
+						Kontaktiraj nas
+					</span>
 				</div>
 				<Image src={logoImage} alt="logo" className="mt-16" />
 				<span className="font-regular text-sm text-slate-400 mt-3">
