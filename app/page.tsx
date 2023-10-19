@@ -96,7 +96,7 @@ export default function Home() {
 								exit={{ y: -20, opacity: 0 }}
 								transition={{ ease: "easeInOut" }}
 								style={{ position: "absolute" }}
-								className={`${heroMessages[index].color}`}
+								className={`${heroMessages[index].color} sm:mt-2`}
 							>
 								{heroMessages[index].content}
 							</motion.div>
@@ -183,7 +183,7 @@ export default function Home() {
 				<section className="bg-emerald-400 mt-10 sm:mt-40 px-6 py-10 sm:px-16 sm:py-12 flex flex-col  sm:grid sm:grid-cols-2 sm:h-[400px]">
 					<div className="flex flex-col gap-6">
 						<h1 className="text-3xl font-bold text-slate-950">
-							Povećaj svoju produktivno danas!
+							Povećaj svoju produktivnost danas!
 						</h1>
 						<p className="text-sm text-slate-700">
 							Započnimo razgovor o vašim potrebama danas! Odaberite datum
