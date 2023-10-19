@@ -102,7 +102,7 @@ export default function Home() {
 							</motion.div>
 						</h1>
 						<p className="text-sm mt-14 sm:text-lg sm:mt-20 text-slate-400">
-							Spajamo maštu, dizajn i inžinjerstvo u jednu cjelinu
+							Spajamo maštu, dizajn i inžinjerstvo u jednu cjelinu...
 						</p>
 						<div>
 							<button
