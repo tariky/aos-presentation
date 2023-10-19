@@ -41,7 +41,9 @@ export default function ReviewItem({
 				variants={cardVariants}
 				className="flex flex-col mt-9 gap-6"
 			>
-				<Image src={logoSrc} className="w-[6rem]" alt="logo-firme" />
+				<div className="h-[5rem] flex items-center">
+					<Image src={logoSrc} className="w-[6rem]" alt="logo-firme" />
+				</div>
 				<p className="text-md text-slate-300">{review}</p>
 				<div className="flex gap-6 items-center">
 					<Image

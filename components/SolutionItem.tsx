@@ -35,7 +35,7 @@ export default function SolutionItem({ title, description, Icon }: Props) {
 				</div>
 				<div className="flex flex-col ml-5">
 					<h4 className="font-bold mt-2 mb-3 text-lg">{title}</h4>
-					<p className="text-slate-300 text-sm">{description}</p>
+					<p className="text-slate-400 text-sm">{description}</p>
 				</div>
 			</motion.div>
 		</motion.div>

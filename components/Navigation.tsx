@@ -7,6 +7,8 @@ import { useCycle, motion, Variants } from "framer-motion";
 import { useDimensions } from "@/hooks/useDimensions";
 import { NavigationList } from "./NavList";
 import { useWindowSize } from "@uidotdev/usehooks";
+import Link from "next/link";
+import { Element, scroller } from "react-scroll";
 
 const sidebar = {
 	open: (height = 1000) => ({
@@ -91,17 +93,80 @@ export default function Navigation() {
 		// </motion.nav>
 		<motion.nav
 			animate={isExpanded ? "expanded" : "initial"}
-			className="flex justify-between bg-slate-950 px-6 py-5 items-center fixed w-full z-10 top-0"
+			className="container mx-auto flex justify-between bg-slate-950 px-6 py-5 items-center fixed w-full z-10 top-0"
 		>
 			<Image src={logoImage} alt="logo" />
+			<div className="sm:flex gap-6 hidden">
+				<h1
+					className="text-md font-medium hover:underline cursor-pointer"
+					onClick={() => {
+						scroller.scrollTo("hero", {
+							duration: 1500,
+							delay: 100,
+							smooth: true,
+							offset: -50, // Scrolls to element + 50 pixels down the page
+							// ... other options
+						});
+					}}
+				>
+					Početna
+				</h1>
+				<h1
+					onClick={() => {
+						scroller.scrollTo("solutions", {
+							duration: 1500,
+							delay: 100,
+							smooth: true,
+							offset: -50, // Scrolls to element + 50 pixels down the page
+							// ... other options
+						});
+					}}
+					className="text-md font-medium hover:underline cursor-pointer"
+				>
+					Rješenja
+				</h1>
+				<h1
+					className="text-md font-medium hover:underline cursor-pointer"
+					onClick={() => {
+						scroller.scrollTo("reviews", {
+							duration: 1500,
+							delay: 100,
+							smooth: true,
+							offset: -50, // Scrolls to element + 50 pixels down the page
+							// ... other options
+						});
+					}}
+				>
+					Reference
+				</h1>
+				<h1
+					className="text-md font-medium hover:underline cursor-pointer"
+					onClick={() => {
+						scroller.scrollTo("contact", {
+							duration: 1500,
+							delay: 100,
+							smooth: true,
+							offset: -50, // Scrolls to element + 50 pixels down the page
+							// ... other options
+						});
+					}}
+				>
+					Kontaktiraj nas
+				</h1>
+			</div>
 			<motion.div
 				initial="initial"
 				animate={isExpanded ? "expanded" : "initial"}
 				variants={circleVariants}
 				transition={{ duration: 1 }}
-				className={`bg-white absolute top-0 left-0 w-full h-[100vh] z-20`}
+				className={`bg-white absolute top-0 left-0 w-full h-[100vh] z-20 sm:hidden`}
 			/>
-			{bgHide && <NavigationList isExpanded={isExpanded} />}
+			{bgHide && (
+				<NavigationList
+					handleCircleClick={handleCircleClick}
+					isExpanded={isExpanded}
+				/>
+			)}
 			{isExpanded ? (
 				<X
 					color={"black"}
@@ -120,7 +185,7 @@ export default function Navigation() {
 						handleCircleClick();
 						setBgHide(true);
 					}}
-					className="z-40"
+					className="z-40 sm:hidden"
 				/>
 			)}
 		</motion.nav>
