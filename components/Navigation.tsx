@@ -1,14 +1,13 @@
 import Image from "next/image";
 import React, { useRef } from "react";
 import logoImage from "../public/logo.svg";
-import logoDarkImage from "../public/logo-dark.svg";
 import { Menu, X } from "lucide-react";
 import { useCycle, motion, Variants } from "framer-motion";
-import { useDimensions } from "@/hooks/useDimensions";
 import { NavigationList } from "./NavList";
 import { useWindowSize } from "@uidotdev/usehooks";
-import Link from "next/link";
-import { Element, scroller } from "react-scroll";
+import { scroller } from "react-scroll";
+import gbflag from "../public/gb-flag.svg";
+import baflag from "../public/ba-flag.svg";
 
 const sidebar = {
 	open: (height = 1000) => ({
@@ -34,6 +33,9 @@ export default function Navigation() {
 	const [isOpen, toggleOpen] = useCycle(false, true);
 	const [bgHide, setBgHide] = React.useState(false);
 	const containerRef = useRef(null);
+
+	const [showLanguageSwitch, setShowLanguageSwtich] =
+		React.useState<boolean>(false);
 
 	const [isExpanded, setIsExpanded] = React.useState(false);
 
@@ -95,8 +97,8 @@ export default function Navigation() {
 			animate={isExpanded ? "expanded" : "initial"}
 			className="container mx-auto flex justify-between bg-slate-950 px-6 py-5 items-center fixed w-full z-10 top-0"
 		>
-			<Image src={logoImage} alt="logo" />
-			<div className="sm:flex gap-6 hidden">
+			<Image src={logoImage} alt="logo" height={80} />
+			<div className="sm:flex gap-6 hidden items-center">
 				<h1
 					className="text-md font-medium hover:underline cursor-pointer"
 					onClick={() => {
@@ -153,7 +155,41 @@ export default function Navigation() {
 				>
 					Kontaktiraj nas
 				</h1>
+				{/* <div className="flex flex-col ml-3 relative"> */}
+				{/* <Image
+						width={30}
+						height={30}
+						src={gbflag}
+						alt="eu flag"
+						onClick={() => {
+							setShowLanguageSwtich(!showLanguageSwitch);
+						}}
+						className="opacity-80 hover:opacity-100 cursor-pointer"
+					/> */}
+				{/* {showLanguageSwitch && (
+						<div className="flex flex-col absolute top-12 left-0 w-[150px] bg-white text-slate-950">
+							<div className="flex items-center gap-3 py-2 px-2 hover:text-white hover:bg-emerald-400 cursor-pointer">
+								<Image
+									width={30}
+									height={30}
+									src={gbflag}
+									alt="gb flag"
+								/>
+								<span>English</span>
+							</div>
+							<div className="flex items-center gap-3 py-2 px-2 hover:text-white hover:bg-emerald-400 cursor-pointer">
+								<Image
+									width={30}
+									height={30}
+									src={baflag}
+									alt="bosnian flag"
+								/>
+								<span>Bosnian</span>
+							</div>
+						</div>
+					)} */}
 			</div>
+			{/* </div> */}
 			<motion.div
 				initial="initial"
 				animate={isExpanded ? "expanded" : "initial"}

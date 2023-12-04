@@ -46,7 +46,7 @@ const heroMessages = [
 
 const cardVariants: Variants = {
 	offscreen: {
-		y: -100,
+		y: -50,
 	},
 	onscreen: {
 		y: 0,
@@ -84,7 +84,7 @@ export default function Home() {
 		<main className="container mx-auto bg-slate-950 text-slate-200">
 			<Navigation />
 			<Element name="hero">
-				<div className="px-6 pt-[40px] w-full sm:grid sm:grid-cols-2 sm:h-[100vh] sm:pt-[100px]">
+				<div className="px-6 pt-[40px] w-full sm:grid sm:grid-cols-2 sm:h-[70vh] sm:pt-[100px]">
 					<section className="flex flex-col mt-20 sm:mt-44">
 						<h1 className="font-black text-3xl sm:text-5xl relative">
 							Mi pravimo
@@ -227,7 +227,7 @@ export default function Home() {
 						<Image
 							src={code}
 							alt="qr code"
-							className="h-[300px] w-[300px]"
+							className="h-[300px] w-[300px] hover:-translate-y-1 transition ease-in"
 						/>
 					</div>
 				</section>
