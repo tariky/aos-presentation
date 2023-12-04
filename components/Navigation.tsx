@@ -97,7 +97,7 @@ export default function Navigation() {
 			animate={isExpanded ? "expanded" : "initial"}
 			className="container mx-auto flex justify-between bg-slate-950 px-6 py-5 items-center fixed w-full z-10 top-0"
 		>
-			<Image src={logoImage} alt="logo" height={80} />
+			<Image src={logoImage} alt="logo" height={55} />
 			<div className="sm:flex gap-6 hidden items-center">
 				<h1
 					className="text-md font-medium hover:underline cursor-pointer"
