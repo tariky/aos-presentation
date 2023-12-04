@@ -219,7 +219,7 @@ export default function Home() {
 								<h2 className="text-lg font-bold">Tarik Čaplja</h2>
 								<span className="text-slate-600">CEO</span>
 								<span className="mt-2">+387 60 320 4600</span>
-								<span>upit@aos.ba</span>
+								<span>creative@lunatik.ba</span>
 							</div>
 						)}
 					</div>
